@@ -6,6 +6,15 @@
     <link rel="stylesheet" href="./style.css">
     <title>To Do List</title>
 </head>
+
+<!-- 
+
+    What to fix visually: 
+    
+    1. Design of the app
+    2. Structure and class names of the app
+ -->
+
 <body>
     <div class="app-wrapper">
         <div class="app">
@@ -16,9 +25,9 @@
             <ul id="task-list">
                 <li class="new-task-wrapper">
                     <div class="new-task">
-                        <input type="checkbox" class="new-task_checkbox">
+                        <input type="checkbox" class="new-task_checkbox" onchange="finishedTask(this)">
                         <span class="new-task_title">Do The Laundry</span>
-                        <button type="button" class="remove-task btn" onclick="deleteCurrTask()">Delete</button>
+                        <button type="button" class="remove-task btn" onclick="deleteCurrTask(this)">Delete</button>
                     </div>
                 </li>
             </ul>
