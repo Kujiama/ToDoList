@@ -15,10 +15,10 @@ const deleteTask = document.querySelector(".remove-task") // get the button for 
 
 function addNewTask(){ 
 
-    let taskName = document.querySelector(".new-task-input").value; // we get the text inside input element
+    let taskName = document.querySelector(".new-task-input"); // we get the text inside input element
     let placeHolderText = document.querySelector(".new-task-input").getAttribute("placeholder"); //we get the placeholder of our text input element
     
-    if(taskName == "" || taskName == placeHolderText){
+    if(taskName.value == "" || taskName.value == placeHolderText){
         alert("please enter a valid task name!")
     }else{
 
@@ -30,13 +30,15 @@ function addNewTask(){
         newTask.innerHTML = `
             <div class="new-task">
                 <input type="checkbox" class="new-task_checkbox" onchange="finishedTask(this)">
-                <span class="new-task_title">${taskName}</span>
+                <span class="new-task_title">${taskName.value}</span>
                 <button type="button" class="remove-task btn" onclick="deleteCurrTask()">Delete</button>
             </div>
         `;
         
         tasks.appendChild(newTask); // add the new task to the unordered list
+        
     }
+    taskName.value = taskName.defaultValue;
 }
 
 function finishedTask(task){
