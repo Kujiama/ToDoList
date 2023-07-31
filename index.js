@@ -59,8 +59,8 @@ function finishedTask(task){
     
 }
 
-function deleteCurrTask(){
-    let currTask = document.querySelector(".task-wrapper") // we get the elemeent that has the selector 
+function deleteCurrTask(task){
+    let currTask = task.closest(".task-wrapper") // we get the elemeent that has the selector 
     /*
         The current problem of this is that It will get the first element it finds.
         In this case it deletes the first task in the list no matter what delete button you press.

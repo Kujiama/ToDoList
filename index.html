@@ -11,18 +11,12 @@
 <body>
     <div class="app-wrapper">
         <div class="app">
-            <h1 class="app-title">Kujiama's To Do List</h1>
+            <h1 class="app-title">Kujiama's To Do List App</h1>
             <div class="input-task">
                 <input type="text" class="new-task-input" id="" placeholder="New task">
                 <span class="add-task-btn btn" onclick="addNewTask()"><i class="fa-solid fa-pen"></i></span>
             </div>
-            <ul id="task-list">
-                <li class="task-wrapper">
-                    <input type="checkbox" class="task-checkbox" onclick="finishedTask(this)">
-                    <h2 class="task-title">Do The Laundry</h2>
-                    <span class="remove-task btn" onclick="deleteCurrTask(this)"><i class="fa-solid fa-trash"></i></span>
-                </li>
-            </ul>
+            <ul id="task-list"></ul>
             
         </div>
     </div>
